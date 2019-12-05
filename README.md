@@ -1,2 +1,0 @@
-# KinetikFinalTask
-EndavaInternshipOutumn2019
