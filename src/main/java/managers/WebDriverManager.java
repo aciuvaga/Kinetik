@@ -14,7 +14,7 @@ public class WebDriverManager {
     private static final String CHROME_DRIVER_PROPERTY = "webdriver.chrome.driver";
 
     public WebDriverManager() {
-        driverType = FileReaderManager.getInstance().getConfigFileReader().getBrowser();
+        driverType = FileReaderManager.getInstance().getConfigFileReader().getBrowser();//return enum browser name
     }
 
     public WebDriver getDriver() {
@@ -28,7 +28,7 @@ public class WebDriverManager {
                 System.setProperty(CHROME_DRIVER_PROPERTY, FileReaderManager.getInstance().getConfigFileReader().getDriverPath());
                 driver = new ChromeDriver();
                 break;
-            case INTERNETEXPLORER:
+            case INTERNET_EXPLORER:
                 driver = new InternetExplorerDriver();
                 break;
         }
@@ -36,6 +36,7 @@ public class WebDriverManager {
         if (FileReaderManager.getInstance().getConfigFileReader().getBrowserWindowSize())
             driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(FileReaderManager.getInstance().getConfigFileReader().getImplicitlyWait(), TimeUnit.SECONDS);
+
         return driver;
     }
 

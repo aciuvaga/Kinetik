@@ -2,5 +2,5 @@ package enums;
 
 public enum DriverType {
     CHROME,
-    INTERNETEXPLORER
+    INTERNET_EXPLORER
 }
