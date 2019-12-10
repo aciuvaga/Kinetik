@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 @Getter
-public class SearchPage extends PageObjects {
+public class SearchPage extends PageObject {
 
-    public SearchPage(final WebDriver driver) {
+    public SearchPage(final WebDriver driver){
         super(driver);
     }
 

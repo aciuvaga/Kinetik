@@ -12,7 +12,7 @@ public class PlaylistsPage extends PageObject {
     @FindBy(xpath = "//div[@class='thumbnail-wrapper']")
     private WebElement createNewPlaylistButton;
 
-    PlaylistsPage(final WebDriver driver) {
+    PlaylistsPage(final WebDriver driver){
         super(driver);
     }
 }
